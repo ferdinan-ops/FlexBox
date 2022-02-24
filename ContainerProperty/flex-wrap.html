@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Wrap</title>
+    <style>
+        .kotak {
+            width: fit-content;
+            margin: 50px auto;
+            box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+            padding: 25px;
+            padding-top: 15px;
+            border-radius: 15px;
+        }
+
+        .container {
+            border: 3px solid black;
+            margin: auto;
+            width: 600px;
+            display: flex;
+        }
+
+        .container div {
+            width: 120px;
+            height: 120px;
+            background-color: aquamarine;
+            margin: 2px;
+        }
+
+        pre {
+            width: fit-content;
+            box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+
+        h3,
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            font-family: poppins, Arial, Helvetica, sans-serif;
+        }
+
+        .no {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            display: flex;
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- no-wrap -->
+    <div class="kotak">
+        <h2>no-wrap</h2>
+        <div class="container no">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+            <div class="empat">5</div>
+            <div class="empat">6</div>
+        </div>
+
+        <h3>Source Code</h3>
+        <pre>.container {
+    border: 3px solid black;
+    margin: auto;
+    width: 600px;
+    display: flex;
+    <mark>flex-wrap: no-wrap;</mark> 
+}
+
+.container div {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(209, 195, 64);
+}</pre>
+    </div>
+    <!-- akhir no-wrap -->
+
+    <!-- wrap -->
+    <div class="kotak">
+        <h2>wrap</h2>
+        <div class="container wrap">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+            <div class="empat">5</div>
+            <div class="empat">6</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    display: flex;
+    <mark>flex-wrap: wrap;</mark> 
+}</pre>
+    </div>
+    <!-- Akhir wrap -->
+
+    <!-- wrap-reverse -->
+    <div class="kotak">
+        <h2>wrap-reverse</h2>
+        <div class="container wrap-reverse">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+            <div class="empat">5</div>
+            <div class="empat">6</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    display: flex;
+    <mark>flex-wrap: wrap;</mark> 
+}</pre>
+    </div>
+    <!-- Akhir wrap-reverse-->
+</body>
+
+</html>

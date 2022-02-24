@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-direction</title>
+    <style>
+        .kotak {
+            width: fit-content;
+            margin: auto;
+            box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+            padding: 25px;
+            padding-top: 15px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+        }
+
+        .container {
+            border: 3px solid black;
+            margin: auto;
+            width: 600px;
+            display: flex;
+        }
+
+        .container div {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            margin: 2px;
+        }
+
+        pre {
+            width: fit-content;
+            box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+
+        h3,
+        h2 {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .row-r {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .column-r {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- row-reverse -->
+    <div class="kotak">
+        <h2>Row reverse</h2>
+        <div class="container row-r">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+        </div>
+
+        <h3>Source Code</h3>
+        <pre>.container {
+    border: 3px solid black;
+    margin: auto;
+    width: 600px;
+    display: flex;
+    <mark>flex-direction: row-reverse;</mark> 
+}
+
+.container div {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(209, 195, 64);
+}</pre>
+    </div>
+    <!-- akhir row-reverse -->
+
+    <!-- column -->
+    <div class="kotak">
+        <h2>Column</h2>
+        <div class="container column">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    display: flex;
+    <mark>flex-direction: column;</mark> 
+}</pre>
+    </div>
+    <!-- Akhir column -->
+
+    <!-- Column reverse -->
+    <div class="kotak">
+        <h2>Column reverse</h2>
+        <div class="container column-r">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    display: flex;
+    <mark>flex-direction: column-reverse;</mark> 
+}</pre>
+    </div>
+    <!-- Column reverse -->
+</body>
+
+</html>

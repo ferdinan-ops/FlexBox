@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .container {
+            border: 3px solid black;
+            margin: auto;
+            width: 600px;
+            display: flex;
+        }
+
+        .container div {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(209, 195, 64);
+        }
+
+        pre {
+            width: fit-content;
+            box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+    </div>
+
+    <h3>Source Code</h3>
+    <pre>.container {
+    border: 3px solid black;
+    margin: auto;
+    width: 600px;
+    <mark>display: flex;</mark> 
+}
+
+.container div {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(209, 195, 64);
+}</pre>
+</body>
+
+</html>

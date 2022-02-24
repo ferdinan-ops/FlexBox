@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify-content</title>
+    <style>
+        .kotak {
+            width: fit-content;
+            margin: 50px auto;
+            box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+            padding: 25px;
+            padding-top: 15px;
+            border-radius: 15px;
+        }
+
+        .container {
+            border: 3px solid black;
+            margin: auto;
+            width: 600px;
+            display: flex;
+        }
+
+        .container div {
+            width: 120px;
+            height: 120px;
+            background-color: aquamarine;
+            margin: 2px;
+        }
+
+        pre {
+            width: fit-content;
+            box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+
+        h3,
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            font-family: poppins, Arial, Helvetica, sans-serif;
+        }
+
+        .flex-end {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .space-between {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .space-arround {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .space-evenly {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- flex-end -->
+    <div class="kotak">
+        <h2>flex-end</h2>
+        <div class="container flex-end">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+        </div>
+
+        <h3>Source Code</h3>
+        <pre>.container {
+    border: 3px solid black;
+    margin: auto;
+    width: 600px;
+    display: flex;
+    <mark>justify-content: flex-end;</mark> 
+}
+
+.container div {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(209, 195, 64);
+}</pre>
+    </div>
+    <!-- akhir flex-end -->
+
+    <!-- center -->
+    <div class="kotak">
+        <h2>center</h2>
+        <div class="container center">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    display: flex;
+    <mark>justify-content: center;</mark> 
+}</pre>
+    </div>
+    <!-- Akhir center -->
+
+    <!-- space-between -->
+    <div class="kotak">
+        <h2>space-betweeen</h2>
+        <div class="container space-between">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    display: flex;
+    <mark>justify-content: space-between;</mark> 
+}</pre>
+    </div>
+    <!-- Akhir space-between -->
+
+    <!-- space-arround-->
+    <div class="kotak">
+        <h2>space-around</h2>
+        <div class="container space-around">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    display: flex;
+    <mark>justify-content: space-around;</mark> 
+}</pre>
+    </div>
+    <!-- Akhir space-around -->
+
+    <!-- space-evenly -->
+    <div class="kotak">
+        <h2>space-evenly</h2>
+        <div class="container space-evenly">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    display: flex;
+    <mark>justify-content: space-evenly;</mark> 
+}</pre>
+    </div>
+    <!-- Akhir space-between -->
+</body>
+
+</html>

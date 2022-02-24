@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="flexbox.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <div class="main">
+        <!-- Deskripsi -->
+        <div class="deskripsi">
+            <h1>Flexbox</h1>
+            <p>Flexbox atau <b>Flexible Box Module</b> adalah sebuah teknik CSS sejak tahun 2017 yang digunakan untuk
+                membantu programmer dalam me<b>layout</b> atau megatur posisi sebuah halaman website.</p>
+            <p>Flexbox merupakan Model layout 1 dimensi yang dapat mengatur jarak dan penjajaran antar item dalam sebuah
+                container. Flexbox hanya dapat mengatur 1 dimensi pada saat tertentu, antara baris atau kolom, tidak
+                bisa keduanya sekaligus.</p>
+            <p>Flexbox Layout Module adalah sebuah modul yang menawarkan cara efektif untuk menyusun, mesejajarakan dan
+                dan mendistribusikan jarak antar item di dalam sebuah container, meskipun ukurannya dinamis atau bahkan
+                kita tidak tahu.</p>
+        </div>
+        <!-- Akhir Deskripsi -->
+
+        <!-- Isi -->
+        <div class="isi">
+            <p>Dalam mempelajari flexbox akan sangat sering ditemukan suatu kondisi seperti gambar dibawah ini.</p>
+            <img src="img/flexbox.jpg" alt="flexbox-teori" width="300px">
+            <p>Pada gambar diatas terlihat 3 kotak sebagai items dan container sebagai pembungkus dari items hal ini
+                adalah prinsip dan bentuk dasar dari flexbox. Berikut gambar lebih jelas terkait dengan gambar diatas.
+            </p>
+            <img src="img/flexbox2.png" alt="flexbox" width="600px">
+            <h4>Istilah pada Flexbox:</h4>
+            <ul>
+                <li><b>main axis:</b> Sumbu utama dari sebuah container yang menentukan urutan dari penempatan items
+                    secara horizontal.</li>
+                <li><b>main-start | main-end:</b> Mulai dan berakhirnya items yang disimpan di dalam container.</li>
+                <li><b>main-size:</b> Ukuran (width/height) dari container yang akan membuat dimensi dari items nya
+                    relatih terhadap size.</li>
+            </ul>
+        </div>
+        <!-- Akhir Isi -->
+
+        <!-- Property untuk flex -->
+        <div class="property">
+            <h2>Property pada container</h2>
+            <img src="img/flexbox3.jpg" alt="container" width="400px">
+            <ul>
+                <li>
+                    <h3>Display</h3>
+                    <pre>.container {
+    display: flex; 
+}</pre>
+                    <p>Membuat sebuah elemen parent menjadi flexbox, dan membuat elemen-elemen didalamnya bisa
+                        berperilaku flex juga.</p>
+                    <a href="containerproperty/display.html" target="blank">Lihat Contoh <i
+                            class="uil uil-angle-double-right"></i></a>
+                </li>
+                <li>
+                    <h3>Flex-direction</h3>
+                    <img src="img/flex-direction.jpg" alt="flex-direction" width="350px">
+                    <pre>.container {
+    flex-directon: row | row-reverse | column | column-reverse; 
+}</pre>
+                    <p>Flex direction memiliki default row, row-reverse berguna untuk mengurutkan dari paling belakang,
+                        column membuat elemen menjadi kolom, column-reverse membuatelemen menjadi kolom dan mengurutkan
+                        dari paling belakang.</p>
+                    <a href="containerproperty/flex-directon.html" target="blank">Lihat Contoh <i
+                            class="uil uil-angle-double-right"></i></a>
+                </li>
+                <li>
+                    <h3>Flex-Wrap</h3>
+                    <img src="img/flex-wrap.jpg" alt="flex-direction" width="350px">
+                    <pre>.container {
+    flex-wrap: nowrap | wrap | wrap-reverse;
+}</pre>
+                    <p>Secara default, semua items di dalam container akan berada pada satu baris meskipun ukurannya
+                        sudah tidak cukup, wrap memungkinkan untuk memindahkan items ke baris di bawahnya</p>
+                    <a href="containerproperty/flex-wrap.html" target="blank">Lihat Contoh <i
+                            class="uil uil-angle-double-right"></i></a>
+                </li>
+                <li>
+                    <h3>Justify-content</h3>
+                    <img src="img/justify-content.jpg" alt="justify-content" width="350px">
+                    <pre class="khusus">.container {
+    justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+}</pre>
+                    <p>Justify-content berguna untuk mengatur rata dari elemen-elemen yang ada di dalam container atau
+                        pembungkusnya. Value <b><i>flex-start</i></b> adalah default value dari justify-content</p>
+                    <a href="containerproperty/justify-content.html" target="blank">Lihat Contoh <i
+                            class="uil uil-angle-double-right"></i></a>
+                </li>
+                <li>
+                    <h3>Align-items</h3>
+                    <img src="img/align-items.jpg" alt="align-items" width="400px">
+                    <pre>.container {
+    align-items: flex-start | flex-end | center | stretch | baseline;
+}</pre>
+                    <p>align-items berguna untuk mengatur rata dari elemen-elemen yang ada di dalam container atau
+                        pembungkusnya secara vertikal. Mengatur perilaku penjajaran items
+                        terhadap cross axis</p>
+                    <a href="containerproperty/align-items.html" target="blank">Lihat Contoh <i
+                            class="uil uil-angle-double-right"></i></a>
+                </li>
+                <li>
+                    <h3>Align-content</h3>
+                    <img src="img/align-content.jpg" alt="align-content" width="350px">
+                    <pre class="khusus">.container {
+    align-content: flex-start | flex-end | center | stretch | space-between | space-around;
+}</pre>
+                    <p>Mengatur jarak antar items terhadap cross axis
+                        (hanya berfungsi ketika items lebih dari 1 baris)</p>
+                    <a href="containerproperty/align-content.html" target="blank">Lihat Contoh <i
+                            class="uil uil-angle-double-right"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- Akhir property untuk flex -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-content</title>
+    <style>
+        .kotak {
+            width: fit-content;
+            margin: 50px auto;
+            box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+            padding: 25px;
+            padding-top: 15px;
+            border-radius: 15px;
+        }
+
+        .container,
+        .container1 {
+            border: 3px solid black;
+            height: 400px;
+            margin: auto;
+            width: 600px;
+            display: flex;
+        }
+
+        .container div {
+            width: 120px;
+            height: 120px;
+            background-color: aquamarine;
+            margin: 2px;
+        }
+
+        .container1 div {
+            width: 120px;
+            background-color: aquamarine;
+            margin: 2px;
+        }
+
+        pre {
+            width: fit-content;
+            box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+
+        h3,
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            font-family: poppins, Arial, Helvetica, sans-serif;
+        }
+
+        .flex-start {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+
+        .flex-end {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+
+        .center {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+        .stretch {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: stretch;
+        }
+
+        .space-between {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .space-around {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- flex-start -->
+    <div class="kotak">
+        <h2>flex-start</h2>
+        <div class="container flex-start">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+            <div class="empat">5</div>
+            <div class="empat">6</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    border: 3px solid black;
+    height: 400px;
+    margin: auto;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    <mark>align-content: flex-start;</mark>
+}
+
+.container div {
+    width: 120px;
+    height: 120px;
+    background-color: aquamarine;
+    margin: 2px;
+}</pre>
+    </div>
+    <!-- Akhir flex-start -->
+
+    <!-- flex-end -->
+    <div class="kotak">
+        <h2>flex-end</h2>
+        <div class="container flex-end">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+            <div class="empat">5</div>
+            <div class="empat">6</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    <mark>align-content: flex-end;</mark>
+}</pre>
+    </div>
+    <!-- Akhir flex-end -->
+
+    <!-- center -->
+    <div class="kotak">
+        <h2>center</h2>
+        <div class="container center">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+            <div class="empat">5</div>
+            <div class="empat">6</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    <mark>align-content: center;</mark>
+}</pre>
+    </div>
+    <!-- Akhir center -->
+
+    <!-- stretch -->
+    <div class="kotak">
+        <h2>stretch</h2>
+        <div class="container1 stretch">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+            <div class="empat">5</div>
+            <div class="empat">6</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    width: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    <mark>align-content: stretch;</mark>
+}</pre>
+    </div>
+    <!-- Akhir stretch -->
+
+    <!-- space-between -->
+    <div class="kotak">
+        <h2>space-between</h2>
+        <div class="container space-between">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+            <div class="empat">5</div>
+            <div class="empat">6</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    <mark>align-content: space-between;</mark>
+}</pre>
+    </div>
+    <!-- Akhir space-between -->
+
+    <!-- space-around -->
+    <div class="kotak">
+        <h2>space-around</h2>
+        <div class="container space-around">
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+            <div class="empat">4</div>
+            <div class="empat">5</div>
+            <div class="empat">6</div>
+        </div>
+        <h3>Source Code</h3>
+        <pre>.container {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    <mark>align-content: space-around;</mark>
+}</pre>
+    </div>
+    <!-- Akhir space-around -->
+</body>
+
+</html>
