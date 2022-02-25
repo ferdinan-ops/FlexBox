@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex-direction</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-grow/flex</title>
     <style>
         .kotak {
             width: fit-content;
@@ -22,11 +22,12 @@
             margin: auto;
             width: 600px;
             display: flex;
+            height: 120px;
         }
 
         .container div {
             width: 100px;
-            height: 100px;
+            /* height: 100px; */
             background-color: aquamarine;
             margin: 2px;
         }
@@ -45,28 +46,25 @@
             font-weight: bold;
         }
 
-        .row-r {
-            display: flex;
-            flex-direction: row-reverse;
+        .dua {
+            align-self: flex-start;
         }
 
-        .column {
-            display: flex;
-            flex-direction: column;
+        .dua-1 {
+            align-self: flex-end;
         }
 
-        .column-r {
-            display: flex;
-            flex-direction: column-reverse;
+        .dua-2 {
+            align-self: center;
         }
     </style>
 </head>
 
 <body>
-    <!-- row-reverse -->
+    <!-- row-order -->
     <div class="kotak">
-        <h2>Row reverse</h2>
-        <div class="container row-r">
+        <h2>flex-start</h2>
+        <div class="container">
             <div class="satu">1</div>
             <div class="dua">2</div>
             <div class="tiga">3</div>
@@ -79,50 +77,74 @@
     margin: auto;
     width: 600px;
     display: flex;
-    <mark>flex-direction: row-reverse;</mark> 
 }
 
 .container div {
     width: 100px;
-    height: 100px;
     background-color: rgb(209, 195, 64);
-}</pre>
-    </div>
-    <!-- akhir row-reverse -->
+}
 
-    <!-- column -->
+/* align-self flex-start */
+<mark>.dua { align-self: flex-start; }</mark>
+</pre>
+    </div>
+    <!-- akhir order -->
+
     <div class="kotak">
-        <h2>Column</h2>
-        <div class="container column">
+        <h2>flex-end</h2>
+        <div class="container">
             <div class="satu">1</div>
-            <div class="dua">2</div>
+            <div class="dua-1">2</div>
             <div class="tiga">3</div>
             <div class="empat">4</div>
         </div>
+
         <h3>Source Code</h3>
         <pre>.container {
+    border: 3px solid black;
+    margin: auto;
+    width: 600px;
     display: flex;
-    <mark>flex-direction: column;</mark> 
-}</pre>
-    </div>
-    <!-- Akhir column -->
+}
 
-    <!-- Column reverse -->
+.container div {
+    width: 100px;
+    background-color: rgb(209, 195, 64);
+}
+
+/* align-self flex-start */
+<mark>.dua { align-self: flex-end; }</mark>
+</pre>
+    </div>
+    <!-- akhir order -->
+
     <div class="kotak">
-        <h2>Column reverse</h2>
-        <div class="container column-r">
+        <h2>center</h2>
+        <div class="container">
             <div class="satu">1</div>
-            <div class="dua">2</div>
+            <div class="dua-2">2</div>
             <div class="tiga">3</div>
             <div class="empat">4</div>
         </div>
+
         <h3>Source Code</h3>
         <pre>.container {
+    border: 3px solid black;
+    margin: auto;
+    width: 600px;
     display: flex;
-    <mark>flex-direction: column-reverse;</mark> 
-}</pre>
+}
+
+.container div {
+    width: 100px;
+    background-color: rgb(209, 195, 64);
+}
+
+/* align-self flex-start */
+<mark>.dua { align-self: center; }</mark>
+</pre>
     </div>
-    <!-- Column reverse -->
+    <!-- akhir order -->
 </body>
 
 </html>
